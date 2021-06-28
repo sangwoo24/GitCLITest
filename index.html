@@ -6,7 +6,7 @@
     <body>
         <center>
             <div style="border: 1px solid; width: 200px; height: 200px; margin: 20px;">                
-                <input id = "text" type="text">
+                <input id = "text" type="email">
                 <button type="submit" onclick=test()> Button </button>
                 <div id = "test"></div>
             </div>
@@ -14,7 +14,12 @@
 
         <script>
             function test() {
-                document.getElementById('test').innerHTML = document.getElementById('text').value;
+                let text = document.getElementById('text').value;
+                if (text != "sangwoo") {
+                    document.getElementById('test').innerHTML = "Wrong!!"
+                } else {
+                    document.getElementById('test').innerHTML = "Correct!!"
+                }
             }
         </script>
     </body>
